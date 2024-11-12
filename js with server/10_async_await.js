@@ -3,7 +3,6 @@
 async function getPostInfo(){
     let postList = await fetch('https://jsonplaceholder.typicode.com/posts')  //await : 첫번째 fetch가 끝날때까지 기다리라는 뜻 
                         .then(res => res.json());
-    
     let postId = postList[0].id;
     let post = await fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`)
                     .then(res => res.json());
