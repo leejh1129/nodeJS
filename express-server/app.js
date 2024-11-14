@@ -1,7 +1,8 @@
 const fs = require('fs');
-const express = require('express');
-const server = express();
+const express = require('express'); // 웹 서버 기능 제공
+const server = express(); // 인스턴스생성
 
+// use = 미들웨어를 등록하는 메소드
 // 해당경로에가서 router 받아오기
 const userRouter = require('./router/user.js');
 
