@@ -19,6 +19,7 @@ server.use(function(err, req, res, next){
 server.get('/error', (req, res, next) => {
     next(new Error('Process Fail! Check Data!'));
 });
+
 // 미들웨어 등록(express보조기능)
 server.use(express.json());
 
