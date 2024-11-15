@@ -2,13 +2,14 @@
 const mysql = require('mysql');
 const sql = require('./sql.js');
 
+// db정보
 const pool = mysql.createPool({
-    host : `localhost`,
-    post : `3306`,
-    user : `dev01`,
-    password : `1234`,
-    database : `dev`,
-    connectionLimit : 10 //내가 선점하고자 하는 connection 최대 개수
+    host : process.env.MYSQL_HOST,
+    post : process.env.MYSQL_PORT,
+    user : process.env.MYSQL_USER,
+    password : process.env.MYSQL_PWD,
+    database : process.env.MYSQL_DB,
+    connectionLimit : process.env.MYSQL_LIMIT //내가 선점하고자 하는 connection 최대 개수
 });
 
 // 
